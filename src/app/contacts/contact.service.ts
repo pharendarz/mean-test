@@ -33,10 +33,10 @@ export class ContactService {
   // get("/api/contacts/:id") endpoint not used by Angular app
 
   // delete("/api/contacts/:id")
-  deleteContact(delContactId: string): Promise<void | string> {
+  deleteContact(delContactId: String): Promise<void | String> {
     return this.http.delete(this.contactsUrl + '/' + delContactId)
     .toPromise()
-    .then((response: MyResponse) => response.json() as string)
+    .then((response: MyResponse) => response.json() as String)
     .catch(this.handleError);
   }
 
